@@ -1,5 +1,5 @@
 
-let todoitems = [];
+let todoItems = [];
 let nextID = 1;
 
 
@@ -12,13 +12,13 @@ let nextID = 1;
 // the function does not need to return anything
 function addToDoItem(text) {
   let todo = {
-    id:nextID,
+    id: nextID,
     text: text,
     completed: false,
   };
-  todoitems.push(todo);
+  todoItems.push(todo);
   nextID++;
-  console.log(todoitems);
+  console.log(todoItems);
 }
 
 // Function to remove a todo to the list
@@ -28,9 +28,9 @@ function addToDoItem(text) {
 // the function does not need to return anything
 function removeToDoItem(todoId) {
   // Implement the logic to add a task here
-  for (let i = 0; 1 < todoitems.length; i++){
-    if(todoitems[i].id === todoId){
-      todoitems.splice(i,1);
+  for (let i = 0; 1 < todoItems.length; i++){
+    if(todoItems[i].id === todoId){
+      todoItems.splice(i,1);
       break;
     }
   }
@@ -45,10 +45,10 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
-  const itemIndex = todoitems.findindex((todo)=> todo.id === todoId);
+  const itemIndex = todoItems.findindex((todo)=> todo.id === todoId);
 
   if (itemIndex !== -1) {
-    todoitems[itemIndex].completed = true;
+    todoItems[itemIndex].completed = true;
   }
 }
 
@@ -60,9 +60,9 @@ function markToDoItemAsCompleted(todoId) {
 // true or false depending on whether the item was successfully deleted
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
-const itemIndex = todoitems.findindex(todo => todo.id === todoId);
+const itemIndex = todoItems.findindex(todo => todo.id === todoId);
   if( itemIndex != -1){
-    todoitems.splice(itemIndex,1);
+    todoItems.splice(itemIndex,1);
   }
 } 
 
@@ -71,7 +71,7 @@ const itemIndex = todoitems.findindex(todo => todo.id === todoId);
 // as completed, remove it completely from the array
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
- todoitems = todoitems.filter(todo => !todo.completed);
+ todoItems = todoItems.filter(todo => !todo.completed);
  
 }
 
