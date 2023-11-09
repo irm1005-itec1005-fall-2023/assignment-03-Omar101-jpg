@@ -11,7 +11,7 @@ let nextID = 1;
 // It's really important that you have a unique ID for each todo item that you push onto the array
 // the function does not need to return anything
 function addToDoItem(text) {
-  let todo = {
+   let todo = {
     id: nextID,
     text: text,
     completed: false,
@@ -45,7 +45,7 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
-  const itemIndex = todoItems.findindex((todo)=> todo.id === todoId);
+  const itemIndex = todoItems.findindex(todo=> todo.id === todoId);
 
   if (itemIndex !== -1) {
     todoItems[itemIndex].completed = true;
