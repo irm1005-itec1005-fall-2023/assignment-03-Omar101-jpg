@@ -1,51 +1,4 @@
-/* Assignment 03: Starting a Todo List App
- *
- * You are going to build the brains of a simple Todo List application
- * in JavaScript. You don't have to worry about the look of the app for now.
- * We will make it look awesome in Assignment 04.
- *
- * For now, we'll focus on giving the application the following features:
- * 1. Add a new todo item
- * 2. Delete a todo item
- * 3. Mark a todo item as completed
- * 4. Delete a todo item
- * 5. Clear all completed todos
- *
- * The following code is the starting point for this assignment.
- *
- * You will have to write the code to initialise the todoItems array and
- * for the functions below.
- *
- * 1. addToDoItem(text)
- * 2. removeToDoItem(todoId)
- * 3. markToDoItemAsCompleted(todoId)
- * 4. deleteToDoItem(todoId)
- * 5. clearCompletedTasks()
- *
- * YOU MUST NOT CHANGE ANY OF THE FUNCTION NAMES OR THE AUTOMATED TESTS WILL FAIL
- *
- * As you write each function, press on the "Run Tests" button in the browser
- * to run the automated tests and check your work.
- *
- * You can also add your own tests and debug statements at the bottom of this file.
- *
- */
 
-
-// Data storage - Initialize the array of To Do items
-//
-// NOTE:
-//
-// - You must use the following object literal structure when creating new todo items
-// - The ID (id) of each todo item must be unique (you can use the length of the array as the ID or generate a random number)
-//
-// {
-//   id: 0,
-//   text: "This is a todo item",
-//   completed: false,
-// }
-
-// Initialise an empty array with the variable name todoItems
 let todoitems = [];
 let nextID = 1;
 
@@ -97,10 +50,10 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
-  const itemIndex = todoItems.findindex((todo)=> todo.id === todoId);
+  const itemIndex = todoitems.findindex((todo)=> todo.id === todoId);
 
   if (itemIndex !== -1) {
-    todoItems[itemIndex].completed = true;
+    todoitems[itemIndex].completed = true;
   }
 }
 
@@ -112,7 +65,7 @@ function markToDoItemAsCompleted(todoId) {
 // true or false depending on whether the item was successfully deleted
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
-const itemIndex = todoItems.findindex(todo => todo.id === todoId);
+const itemIndex = todoitems.findindex(todo => todo.id === todoId);
   if( itemIndex != -1){
     todoitems.splice(itemIndex,1);
   }
@@ -123,7 +76,7 @@ const itemIndex = todoItems.findindex(todo => todo.id === todoId);
 // as completed, remove it completely from the array
 function clearCompletedTasks() {
   // Implement the logic to clear completed tasks here
- todoItems = todoItems.filter(todo => !todo.completed);
+ todoitems = todoitems.filter(todo => !todo.completed);
  
 }
 
