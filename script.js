@@ -21,11 +21,6 @@ function addToDoItem(text) {
   console.log(todoitems);
 }
 
-  // Implement the logic to add a task here
-
-  
-
-
 // Function to remove a todo to the list
 // It should accept a number as a parameter (id of the todo item)
 // Loop through the array of todos, and when you find the todo item with the id
