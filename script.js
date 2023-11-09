@@ -65,7 +65,7 @@ function addToDoItem(text) {
   };
   todoitems.push(todo);
   nextID++;
-  console.log(toditems);
+  console.log(todoitems);
 }
 
   // Implement the logic to add a task here
