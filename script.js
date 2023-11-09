@@ -45,7 +45,7 @@ function removeToDoItem(todoId) {
 // the function does not need to return anything
 function markToDoItemAsCompleted(todoId) {
   // Implement the logic to mark a task as completed here
-  const itemIndex = todoItems.findindex(todo=> todo.id === todoId);
+  const itemIndex = todoItems.findIndex((todo) => todo.id === todoId);
 
   if (itemIndex !== -1) {
     todoItems[itemIndex].completed = true;
@@ -60,7 +60,7 @@ function markToDoItemAsCompleted(todoId) {
 // true or false depending on whether the item was successfully deleted
 function deleteToDoItem(todoId) {
   // Implement the logic to remove a task here
-const itemIndex = todoItems.findindex(todo => todo.id === todoId);
+const itemIndex = todoItems.findIndex(todo => todo.id === todoId);
   if( itemIndex != -1){
     todoItems.splice(itemIndex,1);
   }
